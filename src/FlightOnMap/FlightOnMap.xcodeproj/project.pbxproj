@@ -1,0 +1,347 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		8C44C3B11C4C2E5800F4211B /* FlightAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C44C3B01C4C2E5800F4211B /* FlightAnimator.m */; };
+		8C49A2411C48CC6B0042DF58 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C49A23F1C48CC6B0042DF58 /* Utils.m */; };
+		8CCA92311C4689130024C973 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCA92301C4689130024C973 /* main.m */; };
+		8CCA92341C4689130024C973 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCA92331C4689130024C973 /* AppDelegate.m */; };
+		8CCA92371C4689130024C973 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCA92361C4689130024C973 /* ViewController.m */; };
+		8CCA923C1C4689130024C973 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8CCA923B1C4689130024C973 /* Assets.xcassets */; };
+		8CCA923F1C4689130024C973 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8CCA923D1C4689130024C973 /* LaunchScreen.storyboard */; };
+		D9811EF5DAAF171AE015CAAD /* SinusoidPathCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = D9852DB5D6323C0B454C668C /* SinusoidPathCalculator.m */; };
+		D981348B501E17B0B2F078A2 /* MapAnnotations.m in Sources */ = {isa = PBXBuildFile; fileRef = D982D03D402296E18A2B78CE /* MapAnnotations.m */; };
+		D98DEF2898B79FE5FC52676E /* FlightPathRenderer.m in Sources */ = {isa = PBXBuildFile; fileRef = D9816DD327CB2477F28A87A6 /* FlightPathRenderer.m */; };
+		D98FD9CCDEAD172D5B09F419 /* AirportAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = D983637CD1348950B971E875 /* AirportAnnotationView.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		8C44C3AF1C4C2E5800F4211B /* FlightAnimator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightAnimator.h; sourceTree = "<group>"; };
+		8C44C3B01C4C2E5800F4211B /* FlightAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightAnimator.m; sourceTree = "<group>"; };
+		8C49A23F1C48CC6B0042DF58 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
+		8C49A2401C48CC6B0042DF58 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		8CCA922C1C4689130024C973 /* FlightOnMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightOnMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		8CCA92301C4689130024C973 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		8CCA92321C4689130024C973 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		8CCA92331C4689130024C973 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		8CCA92351C4689130024C973 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		8CCA92361C4689130024C973 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		8CCA923B1C4689130024C973 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		8CCA923E1C4689130024C973 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		8CCA92401C4689130024C973 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D9816DD327CB2477F28A87A6 /* FlightPathRenderer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightPathRenderer.m; sourceTree = "<group>"; };
+		D981FE40662C1FEA565FFED9 /* MapAnnotations.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapAnnotations.h; sourceTree = "<group>"; };
+		D982D03D402296E18A2B78CE /* MapAnnotations.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapAnnotations.m; sourceTree = "<group>"; };
+		D983637CD1348950B971E875 /* AirportAnnotationView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AirportAnnotationView.m; sourceTree = "<group>"; };
+		D9852DB5D6323C0B454C668C /* SinusoidPathCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SinusoidPathCalculator.m; sourceTree = "<group>"; };
+		D9870EA3ADEA636FEE0C7F88 /* AirportAnnotationView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AirportAnnotationView.h; sourceTree = "<group>"; };
+		D98A0AE7C951645B2F7ADEE3 /* SinusoidPathCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SinusoidPathCalculator.h; sourceTree = "<group>"; };
+		D98A37EE0BF64F322BE36C4A /* FlightPathRenderer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FlightPathRenderer.h; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8CCA92291C4689130024C973 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		8CCA92231C4689130024C973 = {
+			isa = PBXGroup;
+			children = (
+				8CCA922E1C4689130024C973 /* FlightOnMap */,
+				8CCA922D1C4689130024C973 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8CCA922D1C4689130024C973 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				8CCA922C1C4689130024C973 /* FlightOnMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		8CCA922E1C4689130024C973 /* FlightOnMap */ = {
+			isa = PBXGroup;
+			children = (
+				8CCA92321C4689130024C973 /* AppDelegate.h */,
+				8CCA92331C4689130024C973 /* AppDelegate.m */,
+				8CCA92351C4689130024C973 /* ViewController.h */,
+				8CCA92361C4689130024C973 /* ViewController.m */,
+				8C49A2401C48CC6B0042DF58 /* Utils.h */,
+				8C49A23F1C48CC6B0042DF58 /* Utils.m */,
+				8C44C3AF1C4C2E5800F4211B /* FlightAnimator.h */,
+				8C44C3B01C4C2E5800F4211B /* FlightAnimator.m */,
+				8CCA923B1C4689130024C973 /* Assets.xcassets */,
+				8CCA923D1C4689130024C973 /* LaunchScreen.storyboard */,
+				8CCA92401C4689130024C973 /* Info.plist */,
+				8CCA922F1C4689130024C973 /* Supporting Files */,
+				D9843318B25CC8235E918721 /* FlightPath */,
+				D98C962882760C1E1D9D7C96 /* MapAnnotations */,
+			);
+			path = FlightOnMap;
+			sourceTree = "<group>";
+		};
+		8CCA922F1C4689130024C973 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8CCA92301C4689130024C973 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D9843318B25CC8235E918721 /* FlightPath */ = {
+			isa = PBXGroup;
+			children = (
+				D98A0AE7C951645B2F7ADEE3 /* SinusoidPathCalculator.h */,
+				D9852DB5D6323C0B454C668C /* SinusoidPathCalculator.m */,
+				D9816DD327CB2477F28A87A6 /* FlightPathRenderer.m */,
+				D98A37EE0BF64F322BE36C4A /* FlightPathRenderer.h */,
+			);
+			name = FlightPath;
+			path = Flightpath;
+			sourceTree = "<group>";
+		};
+		D98C962882760C1E1D9D7C96 /* MapAnnotations */ = {
+			isa = PBXGroup;
+			children = (
+				D982D03D402296E18A2B78CE /* MapAnnotations.m */,
+				D981FE40662C1FEA565FFED9 /* MapAnnotations.h */,
+				D9870EA3ADEA636FEE0C7F88 /* AirportAnnotationView.h */,
+				D983637CD1348950B971E875 /* AirportAnnotationView.m */,
+			);
+			path = MapAnnotations;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		8CCA922B1C4689130024C973 /* FlightOnMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8CCA92431C4689130024C973 /* Build configuration list for PBXNativeTarget "FlightOnMap" */;
+			buildPhases = (
+				8CCA92281C4689130024C973 /* Sources */,
+				8CCA92291C4689130024C973 /* Frameworks */,
+				8CCA922A1C4689130024C973 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = FlightOnMap;
+			productName = FlightOnMap;
+			productReference = 8CCA922C1C4689130024C973 /* FlightOnMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		8CCA92241C4689130024C973 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = "Oleg Montak";
+				TargetAttributes = {
+					8CCA922B1C4689130024C973 = {
+						CreatedOnToolsVersion = 7.2;
+					};
+				};
+			};
+			buildConfigurationList = 8CCA92271C4689130024C973 /* Build configuration list for PBXProject "FlightOnMap" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 8CCA92231C4689130024C973;
+			productRefGroup = 8CCA922D1C4689130024C973 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				8CCA922B1C4689130024C973 /* FlightOnMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		8CCA922A1C4689130024C973 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CCA923F1C4689130024C973 /* LaunchScreen.storyboard in Resources */,
+				8CCA923C1C4689130024C973 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		8CCA92281C4689130024C973 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				8CCA92371C4689130024C973 /* ViewController.m in Sources */,
+				8C49A2411C48CC6B0042DF58 /* Utils.m in Sources */,
+				8CCA92341C4689130024C973 /* AppDelegate.m in Sources */,
+				8CCA92311C4689130024C973 /* main.m in Sources */,
+				D9811EF5DAAF171AE015CAAD /* SinusoidPathCalculator.m in Sources */,
+				8C44C3B11C4C2E5800F4211B /* FlightAnimator.m in Sources */,
+				D98DEF2898B79FE5FC52676E /* FlightPathRenderer.m in Sources */,
+				D981348B501E17B0B2F078A2 /* MapAnnotations.m in Sources */,
+				D98FD9CCDEAD172D5B09F419 /* AirportAnnotationView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		8CCA923D1C4689130024C973 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				8CCA923E1C4689130024C973 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		8CCA92411C4689130024C973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		8CCA92421C4689130024C973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		8CCA92441C4689130024C973 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlightOnMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sm.FlightOnMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		8CCA92451C4689130024C973 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = FlightOnMap/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sm.FlightOnMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		8CCA92271C4689130024C973 /* Build configuration list for PBXProject "FlightOnMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CCA92411C4689130024C973 /* Debug */,
+				8CCA92421C4689130024C973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8CCA92431C4689130024C973 /* Build configuration list for PBXNativeTarget "FlightOnMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				8CCA92441C4689130024C973 /* Debug */,
+				8CCA92451C4689130024C973 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 8CCA92241C4689130024C973 /* Project object */;
+}
