@@ -25,6 +25,8 @@
 
 @property (nonatomic, strong) MKPolyline *flightPathPolyline;
 @property (nonatomic, strong) SinusoidPathCalculator *pathCalculator;
+
+@property (nonatomic, strong) FlightPathRenderer *flightPathRenderer;
 @end
 
 @implementation FlightAnimator
@@ -46,7 +48,9 @@
     [self stopFlight];
     
     self.pathCalculator = [[SinusoidPathCalculator alloc] initWithStartCoordinate:self.startCoordinate endCoordinate:self.endCoordinate];
-    
+    self.flightPathPolyline = [self.pathCalculator createPolyline];
+
+    self.flightPathRenderer = [self createFlightPathRendererForPath:self.flightPathPolyline];
     [self setupMap];
     
     self.flightTime = 0;
@@ -56,6 +60,19 @@
     [self.timer addToRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
 }
 
+- (FlightPathRenderer *)createFlightPathRendererForPath:(MKPolyline *)flightPath
+{
+    FlightPathRenderer *renderer = [[FlightPathRenderer alloc] initWithPolyline:flightPath];
+    renderer.airportSize = self.airportSize;
+    
+    renderer.lineWidth = 8.0f;
+    renderer.pointColor = [UIColor colorWithWhite:0 alpha:0.5];
+
+    renderer.mapView = self.mapView;
+    
+    return renderer;
+}
+
 - (void)stopFlight
 {
     [self.timer removeFromRunLoop:[NSRunLoop mainRunLoop] forMode:NSRunLoopCommonModes];
@@ -63,6 +80,7 @@
     
     [self.mapView removeOverlay:self.flightPathPolyline];
     self.flightPathPolyline = nil;
+    self.flightPathRenderer = nil;
     
     [self.mapView removeAnnotation:self.startAirportAnnotation];
     self.startAirportAnnotation = nil;
@@ -77,7 +95,6 @@
 - (void)setupMap
 {
     // Add path
-    self.flightPathPolyline = [self.pathCalculator createPolyline];
     [self.mapView addOverlay:self.flightPathPolyline];
     
     // Add airports
@@ -173,14 +190,13 @@
     if (overlay != self.flightPathPolyline) {
         return nil;
     }
-
-    FlightPathRenderer *renderer = [[FlightPathRenderer alloc] initWithPolyline:(MKPolyline *)overlay];
-    renderer.airportSize = self.airportSize;
     
-    renderer.lineWidth = 8.0f;
-    renderer.pointColor = [UIColor colorWithWhite:0 alpha:0.5];
-        
-    return renderer;
+    return self.flightPathRenderer;
+}
+
+- (void)invalidateFlightPath
+{
+    [self.flightPathRenderer setNeedsDisplayInMapRect:self.mapView.visibleMapRect];
 }
 
 

@@ -6,6 +6,7 @@
 #import "FlightPathRenderer.h"
 #import "SinusoidPathCalculator.h"
 #import "FlightAnimator.h"
+#import "MKMapView+Zoom.h"
 
 // Rotation supported, but looks not perfect, so disabled by default
 #define MAP_ROTATION_ENABLED NO
@@ -13,6 +14,9 @@
 @interface ViewController ()<MKMapViewDelegate>
 @property (nonatomic, strong) MKMapView *mapView;
 @property (nonatomic, strong) FlightAnimator *flightAnimator;
+
+@property (nonatomic, assign) MKZoomScale lastZoomScale;
+
 @end
 
 
@@ -56,6 +60,19 @@
             viewForAnnotation:(id <MKAnnotation>)annotation
 {
     return [self.flightAnimator mapView:mapView viewForAnnotation:annotation];
+}
+
+- (void)mapView:(MKMapView *)mapView regionWillChangeAnimated:(BOOL)animated
+{
+    self.lastZoomScale = self.mapView.mapZoomScale;
+}
+
+- (void)mapView:(MKMapView *)mapView regionDidChangeAnimated:(BOOL)animated
+{
+    MKZoomScale currentZoomScale = self.mapView.mapZoomScale;
+    if (currentZoomScale != self.lastZoomScale) {
+        [self.flightAnimator invalidateFlightPath];
+    }
 }
 
 @end

@@ -1,5 +1,7 @@
+
 #import "FlightPathRenderer.h"
 #import "Utils.h"
+#import "MKMapView+Zoom.h"
 
 @interface FlightPathRenderer()
 @property (nonatomic, strong) MKPolyline *polyline;
@@ -17,28 +19,37 @@
 }
 
 - (void)drawMapRect:(MKMapRect)mapRect
-          zoomScale:(MKZoomScale)zoomScale
+          zoomScale:(MKZoomScale)dontUseMeUseAccurateZoomScaleInstead
           inContext:(CGContextRef)context
 {
     NSUInteger pointCount = self.polyline.pointCount;
     MKMapPoint *points = self.polyline.points;
+
+    // drawMapRect: method always reflects the current zoom level.
+    // We need calculate realZoom to improve rendering
+    //
+    MKZoomScale accurateZoomScale = [self.mapView mapZoomScale];
     
     // Clip map to avoid clipping points on borders of mapRect
     //
-    CGFloat lineSize = self.lineWidth / zoomScale;
+    CGFloat lineSize = self.lineWidth / accurateZoomScale;
     MKMapRect clipRect = MKMapRectInset(mapRect, -lineSize, -lineSize);
-    
+
     if (pointCount > 1)
     {
         CGContextSetFillColorWithColor(context, self.pointColor.CGColor);
         
         const double MIN_POINT_DELTA = 20.0;
-        double minPointDelta = MIN_POINT_DELTA / zoomScale;
-        
-        // We dont want draw path points on airports
+        double minPointDelta = MIN_POINT_DELTA / accurateZoomScale;
+
+        // We dont want draw path points on airports. Airport rects extended to lineZise to avoid
+        // drawing points on airport borders.
         //
-        MKMapRect startAirportRect = MakeRectWithCenterPoint(points[0], self.airportSize.width, self.airportSize.height, zoomScale);
-        MKMapRect endAirportRect = MakeRectWithCenterPoint(points[pointCount-1], self.airportSize.width, self.airportSize.height, zoomScale);
+        MKMapRect startAirportRect = MakeRectWithCenterPoint(points[0], self.airportSize.width, self.airportSize.height, accurateZoomScale);
+        startAirportRect = MKMapRectInset(startAirportRect, -lineSize, -lineSize);
+        
+        MKMapRect endAirportRect = MakeRectWithCenterPoint(points[pointCount-1], self.airportSize.width, self.airportSize.height, accurateZoomScale);
+        endAirportRect = MKMapRectInset(endAirportRect, -lineSize, -lineSize);
 
         MKMapPoint lastPoint = points[0];
         for (NSUInteger index = 0; index < pointCount; index++) {

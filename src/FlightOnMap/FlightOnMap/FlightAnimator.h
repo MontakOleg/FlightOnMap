@@ -20,4 +20,6 @@
 - (void)startFlight;
 - (void)stopFlight;
 
+- (void)invalidateFlightPath;
+
 @end

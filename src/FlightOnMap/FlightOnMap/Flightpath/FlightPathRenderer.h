@@ -6,6 +6,8 @@
 @property (nonatomic, assign) CGFloat lineWidth;
 @property (nonatomic, strong) UIColor *pointColor;
 
+@property (nonatomic, weak) MKMapView *mapView;
+
 - (instancetype)initWithPolyline:(MKPolyline *)polyline;
 
 - (MKPolyline *)polyline;

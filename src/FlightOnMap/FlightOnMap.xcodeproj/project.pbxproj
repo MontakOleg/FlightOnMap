@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		8C44C3B11C4C2E5800F4211B /* FlightAnimator.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C44C3B01C4C2E5800F4211B /* FlightAnimator.m */; };
 		8C49A2411C48CC6B0042DF58 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 8C49A23F1C48CC6B0042DF58 /* Utils.m */; };
+		8CB9BD911C4E50E800E6BBE8 /* MKMapView+Zoom.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CB9BD901C4E50E800E6BBE8 /* MKMapView+Zoom.m */; };
 		8CCA92311C4689130024C973 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCA92301C4689130024C973 /* main.m */; };
 		8CCA92341C4689130024C973 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCA92331C4689130024C973 /* AppDelegate.m */; };
 		8CCA92371C4689130024C973 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CCA92361C4689130024C973 /* ViewController.m */; };
@@ -25,6 +26,8 @@
 		8C44C3B01C4C2E5800F4211B /* FlightAnimator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FlightAnimator.m; sourceTree = "<group>"; };
 		8C49A23F1C48CC6B0042DF58 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		8C49A2401C48CC6B0042DF58 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
+		8CB9BD8F1C4E50E800E6BBE8 /* MKMapView+Zoom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MKMapView+Zoom.h"; sourceTree = "<group>"; };
+		8CB9BD901C4E50E800E6BBE8 /* MKMapView+Zoom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MKMapView+Zoom.m"; sourceTree = "<group>"; };
 		8CCA922C1C4689130024C973 /* FlightOnMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FlightOnMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8CCA92301C4689130024C973 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		8CCA92321C4689130024C973 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -82,6 +85,8 @@
 				8C49A23F1C48CC6B0042DF58 /* Utils.m */,
 				8C44C3AF1C4C2E5800F4211B /* FlightAnimator.h */,
 				8C44C3B01C4C2E5800F4211B /* FlightAnimator.m */,
+				8CB9BD8F1C4E50E800E6BBE8 /* MKMapView+Zoom.h */,
+				8CB9BD901C4E50E800E6BBE8 /* MKMapView+Zoom.m */,
 				8CCA923B1C4689130024C973 /* Assets.xcassets */,
 				8CCA923D1C4689130024C973 /* LaunchScreen.storyboard */,
 				8CCA92401C4689130024C973 /* Info.plist */,
@@ -196,6 +201,7 @@
 				8C49A2411C48CC6B0042DF58 /* Utils.m in Sources */,
 				8CCA92341C4689130024C973 /* AppDelegate.m in Sources */,
 				8CCA92311C4689130024C973 /* main.m in Sources */,
+				8CB9BD911C4E50E800E6BBE8 /* MKMapView+Zoom.m in Sources */,
 				D9811EF5DAAF171AE015CAAD /* SinusoidPathCalculator.m in Sources */,
 				8C44C3B11C4C2E5800F4211B /* FlightAnimator.m in Sources */,
 				D98DEF2898B79FE5FC52676E /* FlightPathRenderer.m in Sources */,
