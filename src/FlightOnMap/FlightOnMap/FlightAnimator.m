@@ -196,7 +196,7 @@
 
 - (void)invalidateFlightPath
 {
-    [self.flightPathRenderer setNeedsDisplayInMapRect:self.mapView.visibleMapRect];
+    [self.flightPathRenderer setNeedsDisplay];
 }
 
 
